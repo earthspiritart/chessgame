@@ -1,8 +1,8 @@
 class Board
 	def initialize
-		
+
 		@grid = Array.new(8){Array.new(8)}
-			
+
 	end
 
 	def show
@@ -11,17 +11,17 @@ class Board
 			row.each do |square|
 				if square
 					print square
-				else 
+				else
 					print"-"
 
 				end
-			end	
+			end
 			puts
 		end
 	end
 
-	def insert(x,y,WP)
-		@grid[x][y] = WP
+	def insert(x,y,wp)
+		@grid[x][y] = wp
 	end
 
 
@@ -38,6 +38,10 @@ class WhitePawn < Pawn
 	# 	WP1 = WhitePawn.new
 	# 	WP2 = WhitePawn.new
 	# end
+
+	def to_s
+		"WP"
+	end
 
 
 
